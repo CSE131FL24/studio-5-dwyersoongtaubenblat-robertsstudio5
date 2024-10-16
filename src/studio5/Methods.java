@@ -16,6 +16,7 @@ public class Methods {
 	public static double distanceBetween(double x1, double y1, double x2, double y2) {
 		double distance = 0;
 		// FIXME: Hint use Math methods (e.g. Math.sqrt) to compute the distance
+		distance = Math.sqrt(Math.pow(x2-x1, 2)+Math.pow(y2-y1,2));
 		
 		return distance;
 	}
@@ -76,6 +77,13 @@ public class Methods {
 		int sum = 0;
 		// FIXME: Compute the sum of the values in an array
 		
+		for (int i=0; i<values.length; i++) {
+			
+		sum += values[i];
+		
+		}
+		
+		
 		return sum;
 	}
 
@@ -87,16 +95,44 @@ public class Methods {
 	 * @return and array of size that's filled with value
 	 */
 	public static int[] filledArray(int length, int value) {
-		int[] values = null; // FIXME: Create an array of the appropriate size
+		 // FIXME: Create an array of the appropriate size
 		// TODO: Finish this method
 
+		int[] values = new int[length];
 		
-
+for (int i=0; i< length; i++) {
+	
+	values[i] = value;
+	
+}
 		return values;
 	}
 
+
+
+	
+	public static double arraryMean(int[] values) {
+		/*double sum =0.0;
+		for (int i=0; i<values.length; i++) {
+			
+			sum += values[i];
+			
+			}
+		
+		sum = sum/values.length;
+		*/
+		
+		return arraySum(values)/ double(values.length);
+		
+		//return sum;
+		
+	}
+}
+	
+	
+	
 	// TODO: Create an arrayMean method which accepts an int array of values parameter.
 	// TODO: Create a JavaDoc comment for the arrayMean method.
 
 	
-}
+
